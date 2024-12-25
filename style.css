@@ -52,7 +52,7 @@ nav a {
     font-weight: bold;
     display: flex;
     justify-content: center;  /* Centraliza os itens no eixo horizontal */
-    margin: auto;
+    margin: 5px;
     white-space: nowrap; /* Impede que o texto quebre para a linha */
 }
 
@@ -85,16 +85,15 @@ nav .social-icons a:hover {
 @media (max-width: 768px) {
     /* Muda o layout para coluna em telas menores */
     nav {
-        flex-direction: row;  /* Mantém os itens na mesma linha */
-        align-items: center;  /* Alinha verticalmente os itens ao centro */
-        padding: 10px;  /* Menos espaçamento nas laterais */
+        flex-direction: row;  /* Garante que os itens fiquem em linha, ao invés de coluna */
+        align-items: center;  /* Alinha os itens verticalmente ao centro */
+        justify-content: space-between;  /* Distribui os itens com espaçamento entre eles */
     }
 
+    /* Ajusta o tamanho e alinhamento dos links */
     nav a {
-        padding: 10px;
-        text-align: center;
+
         width: auto;  /* Garante que a largura dos links se ajuste automaticamente */
-        margin: 5px;  /* Ajuste de margem para garantir espaçamento */
     }
 
     /* Alinha os ícones sociais no centro */
@@ -108,7 +107,7 @@ nav .social-icons a:hover {
 @media (max-width: 480px) {
     /* Pequenos ajustes para telas muito pequenas */
     nav a {
-        width: auto;  /* Garante que a largura dos links se ajuste automaticamente */
+               width: auto;  /* Garante que a largura dos links se ajuste automaticamente */
 
     }
 }
@@ -228,20 +227,14 @@ p {
 }
 
 .container2 {
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-    margin: auto;
     display: flex;
     flex-wrap: wrap; 
-    justify-content: center;  /* Centraliza os itens no eixo principal (vertical) */
-    align-items: center;      /* Centraliza os itens no eixo transversal (horizontal) */
+    justify-content: center; 
     gap: 20px; 
     padding: 20px;
-    height: 100vh;            /* Garantir que o contêiner ocupe 100% da altura da tela */
+    max-width: 1200px;
+    margin: 0 auto; 
 }
-
-
 
 .quadrado {
     display: flex;
@@ -296,12 +289,6 @@ p {
 }
 
 .card-container {
-    
-    max-width: 900px;
-    margin: auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -376,7 +363,6 @@ p {
     }
 
     .container2 {
-        justify-content: center;
         flex-direction: column; /* Alinha os itens verticalmente */
         gap: 15px;
     }
