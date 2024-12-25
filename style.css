@@ -47,7 +47,7 @@ nav {
 /* Estilo para os links de navegação */
 nav a {
     color: white;
-    padding: nowrap ;
+    padding: 0 ;
     text-decoration: none;
     font-weight: bold;
     display: flex;
