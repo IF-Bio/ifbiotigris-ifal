@@ -45,30 +45,24 @@ nav {
 }
 
 /* Estilo para os links de navegação */
-nav {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #43a047;
-    display: flex;
-    justify-content: center;  /* Centraliza os itens no eixo horizontal */
-    position: relative;
-    flex-wrap: nowrap; /* Impede que os itens quebrem linha */
-}
-
-nav a { 
+nav a {
     color: white;
-    padding: 12px;
+    padding: 0 ;
     text-decoration: none;
     font-weight: bold;
     display: flex;
     justify-content: center;  /* Centraliza os itens no eixo horizontal */
-    margin: 5px;
+    margin: auto;
     white-space: nowrap; /* Impede que o texto quebre para a linha */
 }
 
-
+/* Estilo para ícones sociais na navegação */
+nav .social-icons {
+    display: flex;
+    justify-content: center;  /* Centraliza os itens no eixo horizontal */
+    gap: 10px;
+    margin-left: 15px;
+}
 
 /* Estilo para ícones sociais */
 nav .social-icons a {
