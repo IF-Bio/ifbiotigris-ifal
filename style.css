@@ -45,7 +45,7 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     display: flex;
-    align-items: center;
+    justify-content: center;  /* Centraliza os itens no eixo horizontal */
     margin: 5px;
     white-space: nowrap; /* Impede que o texto quebre para a linha */
 }
@@ -53,7 +53,7 @@ nav a {
 /* Estilo para ícones sociais na navegação */
 nav .social-icons {
     display: flex;
-    align-items: center;
+    justify-content: center;  /* Centraliza os itens no eixo horizontal */
     gap: 10px;
     margin-left: 15px;
 }
