@@ -94,7 +94,7 @@ nav .social-icons a:hover {
         padding: 10px;
         text-align: center;
         width: auto;  /* Garante que a largura dos links se ajuste automaticamente */
-        margin: 5px;  /* Ajuste de margem para garantir espaçamento */
+        margin: auto;  /* Ajuste de margem para garantir espaçamento */
     }
 
     /* Alinha os ícones sociais no centro */
