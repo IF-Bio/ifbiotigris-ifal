@@ -39,36 +39,21 @@ nav {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #43a047;
     display: flex;
-    justify-content: center;  /* Centraliza os itens no eixo horizontal */
+    justify-content: center;
     position: relative;
-    flex-wrap: nowrap; /* Impede que os itens quebrem linha */
+    flex-wrap: nowrap;
 }
 
 /* Estilo para os links de navegação */
 nav a {
     color: white;
-    padding: 0 ;
+    padding: 0;
     text-decoration: none;
     font-weight: bold;
     display: flex;
-    justify-content: center;  /* Centraliza os itens no eixo horizontal */
-    margin: auto;
-    white-space: nowrap; /* Impede que o texto quebre para a linha */
-}
-
-/* Estilo para ícones sociais na navegação */
-nav .social-icons {
-    display: flex;
-    justify-content: center;  /* Centraliza os itens no eixo horizontal */
-    gap: 10px;
-    margin-left: 15px;
-}
-
-/* Estilo para ícones sociais */
-nav .social-icons a {
-    color: #fff;
-    font-size: 20px;
-    transition: color 0.3s ease;
+    justify-content: center;
+    margin: 5px;
+    white-space: nowrap;
 }
 
 /* Estilo de hover para os links */
@@ -76,40 +61,78 @@ nav a:hover {
     background-color: #66bb6a;
 }
 
-/* Estilo de hover para os ícones sociais */
-nav .social-icons a:hover {
-    color: #1da1f2;
-}
-
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
-    /* Muda o layout para coluna em telas menores */
+    /* Ajusta a navegação para ficar em coluna em telas pequenas */
     nav {
-        flex-direction: row;  /* Mantém os itens na mesma linha */
-        align-items: center;  /* Alinha verticalmente os itens ao centro */
-        padding: 10px;  /* Menos espaçamento nas laterais */
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
     }
 
     nav a {
         padding: 10px;
         text-align: center;
-        width: auto;  /* Garante que a largura dos links se ajuste automaticamente */
-        margin: auto;  /* Ajuste de margem para garantir espaçamento */
+        width: 100%;
+        margin: 5px 0;
     }
 
-    /* Alinha os ícones sociais no centro */
-    nav .social-icons {
+    .social-icons {
         margin-left: 0;
         margin-top: 10px;
         justify-content: center;
     }
+
+    /* Ajusta os containers e as imagens para telas menores */
+    .container {
+        grid-template-columns: 1fr 1fr; /* Duas colunas em telas menores */
+    }
+
+    .container2 {
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .developer img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .card {
+        width: calc(50% - 20px); /* Card ocupa metade da tela em telas menores */
+        margin: 15px 10px;
+    }
+
+    header img {
+        width: 80px; /* Ajusta o tamanho da imagem do cabeçalho */
+    }
 }
 
 @media (max-width: 480px) {
-    /* Pequenos ajustes para telas muito pequenas */
-    nav a {
-        width: auto;  /* Garante que a largura dos links se ajuste automaticamente */
+    /* Ajustes para telas muito pequenas */
+    header img {
+        width: 60px;
+    }
 
+    nav a {
+        padding: 1px;
+        font-size: 14px;
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+    }
+
+    .developer img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .card {
+        width: calc(100% - 20px); /* Card ocupa toda a largura da tela */
+        margin: 10px;
     }
 }
 
@@ -118,14 +141,16 @@ section {
 }
 
 section img {
-    margin: 10px; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    width: 100%; /* Garante que a imagem ocupe toda a largura do container */
+    object-fit: cover;
 }
 
 section img:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 footer {
@@ -134,10 +159,9 @@ footer {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: center;  /* Centraliza os itens no eixo horizontal */
+    justify-content: center;
     position: relative;
-    flex-wrap: nowrap; 
-    max-width: 900px;
+    flex-wrap: nowrap;
     background-color: #2e7d32;
     color: white;
     text-align: center;
@@ -189,11 +213,11 @@ p {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin: 20px auto;
     max-width: 1200px;
-    width: 90%; 
+    width: 90%;
 }
 
 .developer {
@@ -201,53 +225,53 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f1f8e9; 
+    background-color: #f1f8e9;
     padding: 15px;
-    border-radius: 10px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .developer img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     object-fit: cover;
 }
 
 .developer h3 {
-    margin: 10px 0 5px; 
+    margin: 10px 0 5px;
     font-size: 1.2em;
-    color: #388e3c; 
+    color: #388e3c;
 }
 
 .developer p {
     margin: 0;
     font-size: 0.9em;
-    color: #555; 
+    color: #555;
 }
 
 .container2 {
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 20px; 
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
     max-width: 1200px;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 .quadrado {
     display: flex;
-    align-items: flex-end; 
+    align-items: flex-end;
     justify-content: center;
     width: 250px;
     height: 250px;
     background-size: cover;
     background-position: center;
-    border-radius: 15px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    text-decoration: none; 
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -259,7 +283,7 @@ p {
 }
 
 .quadrado span {
-    color: #fff; 
+    color: #fff;
     font-size: 1.2em;
     font-weight: bold;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
@@ -274,127 +298,6 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)); 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
     z-index: 0;
-}
-
-.body2 {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-}
-
-.img2 {
-    max-width: 100%;
-    height: auto;
-}
-
-.card-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.card {
-    text-decoration: none;
-    background-color: #fdf8f8;
-    border: 2px solid #129e48;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    width: calc(33.333% - 20px); 
-    text-align: center;
-    transition: transform 0.2s, box-shadow 0.2s;
-    color: #333;
-    margin: 30px 15px; 
-}
-
-.card h3 {
-    margin: 0 0 10px;
-    font-size: 16px;
-}
-
-.card p {
-    margin: 0;
-    font-size: 14px;
-    color: #666;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* Ajustes de responsividade para dispositivos móveis */
-@media (max-width: 768px) {
-    header {
-        padding: 10px;
-    }
-
-    header img {
-        width: 80px; 
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 1px;
-    }
-
-    nav a {
-        padding: 5px;
-        text-align: center;
-        width: 100%;
-    }
-
-    nav .social-icons {
-        margin-left: 0;
-        margin-top: 10px;
-        justify-content: center;
-    }
-
-    .container {
-        grid-template-columns: 1fr 1fr; /* Duas colunas em vez de três */
-    }
-
-    .developer img {
-        width: 120px;
-        height: 120px;
-    }
-
-    .container2 {
-        flex-direction: column; /* Alinha os itens verticalmente */
-        gap: 15px;
-    }
-
-    .card {
-        width: calc(50% - 20px); /* Card ocupa metade da tela em telas menores */
-        margin: 15px 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    header img {
-        width: 60px; 
-    }
-
-    nav a {
-        padding: 1px;
-        font-size: 14px;
-    }
-
-    .container {
-        grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
-    }
-
-    .developer img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .card {
-        width: calc(100% - 20px); /* Card ocupa toda a largura da tela */
-        margin: 10px;
-    }
 }
