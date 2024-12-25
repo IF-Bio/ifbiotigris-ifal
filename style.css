@@ -33,7 +33,8 @@ nav {
     background-color: #43a047;
     display: flex;
     justify-content: center;
-    align-items: center;
+    justify-content: center;  /* Centraliza os itens no eixo horizontal */
+    position: relative;
     padding: 10px;
     flex-wrap: nowrap; /* Impede que os itens quebrem linha */
 }
