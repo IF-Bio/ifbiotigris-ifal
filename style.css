@@ -85,15 +85,16 @@ nav .social-icons a:hover {
 @media (max-width: 768px) {
     /* Muda o layout para coluna em telas menores */
     nav {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: row;  /* Garante que os itens fiquem em linha, ao invés de coluna */
+        align-items: center;  /* Alinha os itens verticalmente ao centro */
+        justify-content: space-between;  /* Distribui os itens com espaçamento entre eles */
     }
 
     /* Ajusta o tamanho e alinhamento dos links */
     nav a {
         padding: 12px;
         text-align: center;
-        width: 100%;
+        width: auto;  /* Garante que a largura dos links se ajuste automaticamente */
     }
 
     /* Alinha os ícones sociais no centro */
