@@ -6,6 +6,9 @@ body {
 }
 
 header {
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #2e7d32;
     color: white;
     padding: 20px;
@@ -30,11 +33,14 @@ header img.right {
 
 /* Estilo geral para o nav */
 nav {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #43a047;
     display: flex;
     justify-content: center;  /* Centraliza os itens no eixo horizontal */
     position: relative;
-    padding: nowrap;
     flex-wrap: nowrap; /* Impede que os itens quebrem linha */
 }
 
@@ -122,13 +128,19 @@ section img:hover {
 }
 
 footer {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;  /* Centraliza os itens no eixo horizontal */
+    position: relative;
+    flex-wrap: nowrap; 
+    max-width: 900px;
     background-color: #2e7d32;
     color: white;
     text-align: center;
-    padding: 10px;
-    position: fixed;
     bottom: 0;
-    width: 100%;
 }
 
 .content {
@@ -316,7 +328,7 @@ p {
 /* Ajustes de responsividade para dispositivos móveis */
 @media (max-width: 768px) {
     header {
-        padding: 1px;
+        padding: 10px;
     }
 
     header img {
