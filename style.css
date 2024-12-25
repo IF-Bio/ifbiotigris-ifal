@@ -85,28 +85,17 @@ nav .social-icons a:hover {
 @media (max-width: 768px) {
     /* Muda o layout para coluna em telas menores */
     nav {
-        max-width: 900px;
-        margin: auto;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        background-color: #43a047;
-        display: flex;
-        justify-content: center;  /* Centraliza os itens no eixo horizontal */
-        position: relative;
-        flex-wrap: nowrap; /* Impede que os itens quebrem linha */
+        flex-direction: row;  /* Garante que os itens fiquem em linha, ao invés de coluna */
+        align-items: center;  /* Alinha os itens verticalmente ao centro */
+        justify-content:center;  /* Distribui os itens com espaçamento entre eles */
     }
-    
-    /* Estilo para os links de navegação */
+
+    /* Ajusta o tamanho e alinhamento dos links */
     nav a {
-        color: white;
-        padding: 0 ;
-        text-decoration: none;
-        font-weight: bold;
-        display: flex;
-        justify-content: center;  /* Centraliza os itens no eixo horizontal */
-        margin: 5px;
-        white-space: nowrap; /* Impede que o texto quebre para a linha */
+
+        width: auto;  /* Garante que a largura dos links se ajuste automaticamente */
     }
+
     /* Alinha os ícones sociais no centro */
     nav .social-icons {
         margin-left: 0;
@@ -117,17 +106,9 @@ nav .social-icons a:hover {
 
 @media (max-width: 480px) {
     /* Pequenos ajustes para telas muito pequenas */
-    
-    /* Estilo para os links de navegação */
     nav a {
-        color: white;
-        padding: 0 ;
-        text-decoration: none;
-        font-weight: bold;
-        display: flex;
-        justify-content: center;  /* Centraliza os itens no eixo horizontal */
-        margin: 5px;
-        white-space: nowrap; /* Impede que o texto quebre para a linha */
+        width: auto;  /* Garante que a largura dos links se ajuste automaticamente */
+
     }
 }
 
