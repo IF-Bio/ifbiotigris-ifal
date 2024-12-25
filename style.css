@@ -93,7 +93,7 @@ nav .social-icons a:hover {
     /* Ajusta o tamanho e alinhamento dos links */
     nav a {
         padding: 12px;
-        text-align: center;
+       justify-content: center;  /* Centraliza os itens no eixo horizontal */
         width: auto;  /* Garante que a largura dos links se ajuste automaticamente */
     }
 
