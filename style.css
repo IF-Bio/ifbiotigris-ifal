@@ -92,9 +92,7 @@ nav .social-icons a:hover {
 
     /* Ajusta o tamanho e alinhamento dos links */
     nav a {
-        padding: 12px;
-        flex-direction: row;  /* Garante que os itens fiquem em linha, ao invés de coluna */
-        text-align: center;
+
         width: auto;  /* Garante que a largura dos links se ajuste automaticamente */
     }
 
