@@ -1,0 +1,324 @@
+
+
+/* Estilo base do body */
+body { 
+    font-family: 'Times New Roman', sans-serif;
+    background-color: #e8f5e9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para o Header */
+header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header img {
+    position: absolute;
+    width: 100px;
+}
+
+header img.left {
+    top: 0.1px;
+    left: 20px;
+}
+
+header img.right {
+    top: 1px;
+    right: 20px;
+}
+
+/* Estilos para a Navegação */
+nav {
+    background-color: #43a047;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha em telas pequenas */
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+nav .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 15px;
+}
+
+nav .social-icons a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #66bb6a;
+}
+
+nav .social-icons a:hover {
+    color: #1da1f2;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    header img {
+        width: 80px; /* Reduzir o tamanho da imagem do logo */
+    }
+
+    nav {
+        flex-direction: column; /* Empilhar os itens de navegação na vertical */
+        align-items: stretch; /* Garantir que os links ocupem toda a largura */
+        padding: 10px;
+    }
+
+    nav a {
+        padding: 12px;
+        text-align: center;
+        width: 100%; /* Garantir que os links ocupem toda a largura da tela */
+    }
+
+    nav .social-icons {
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center;
+    }
+}
+
+/* Media Query para telas muito pequenas (celulares em modo retrato) */
+@media (max-width: 480px) {
+    header img {
+        width: 60px; /* Diminuir ainda mais o logo em telas muito pequenas */
+    }
+
+    nav a {
+        padding: 10px;
+        font-size: 14px; /* Ajustar o tamanho da fonte para dispositivos muito pequenos */
+    }
+}
+
+
+section {
+    padding: 20px;
+}
+
+section img {
+    margin: 10px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+}
+
+section img:hover {
+    transform: scale(1.05); 
+}
+
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.content {
+    max-width: 900px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #388e3c;
+    font-size: 30px;
+    text-align: center;
+}
+
+.topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.topic {
+    flex: 1 1 45%;
+    background-color: #f1f8e9;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.topic:hover {
+    background-color: #a5d6a7;
+}
+
+.topic img {
+    width: 100px;
+    height: 100px;
+}
+
+p {
+    text-align: justify;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    margin: 20px auto; 
+    max-width: 1200px;
+    width: 90%; 
+}
+
+.developer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f1f8e9; 
+    padding: 15px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.developer img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px; 
+    object-fit: cover;
+}
+
+.developer h3 {
+    margin: 10px 0 5px; 
+    font-size: 1.2em;
+    color: #388e3c; 
+}
+
+.developer p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555; 
+}
+
+.container2 {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.quadrado {
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-decoration: none; 
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quadrado:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.quadrado span {
+    color: #fff; 
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    margin: 15px;
+    z-index: 1;
+}
+
+.quadrado::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)); 
+    z-index: 0;
+}
+
+.body2 {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.img2 {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    text-decoration: none;
+    background-color: #fdf8f8;
+    border: 2px solid #129e48;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: calc(33.333% - 20px); 
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    color: #333;
+    margin: 30px 15px; 
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+}
+
+.card p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
