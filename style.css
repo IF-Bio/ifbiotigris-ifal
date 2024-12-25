@@ -32,17 +32,16 @@ header img.right {
 nav {
     background-color: #43a047;
     display: flex;
-    justify-content: center;
     justify-content: center;  /* Centraliza os itens no eixo horizontal */
     position: relative;
-    padding: 10px;
+    padding: nowrap;
     flex-wrap: nowrap; /* Impede que os itens quebrem linha */
 }
 
 /* Estilo para os links de navegação */
 nav a {
     color: white;
-    padding: 15px 20px;
+    padding: nowrap ;
     text-decoration: none;
     font-weight: bold;
     display: flex;
