@@ -1,4 +1,4 @@
-body { 
+body {  
     font-family: 'Times New Roman', sans-serif;
     background-color: #e8f5e9;
     margin: 0;
@@ -28,15 +28,17 @@ header img.right {
     right: 20px;
 }
 
+/* Estilo geral para o nav */
 nav {
     background-color: #43a047;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Alinha os itens verticalmente */
-    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    padding: 10px;
+    flex-wrap: nowrap; /* Impede que os itens quebrem linha */
 }
 
+/* Estilo para os links de navegação */
 nav a {
     color: white;
     padding: 15px 20px;
@@ -44,10 +46,11 @@ nav a {
     font-weight: bold;
     display: flex;
     align-items: center;
-    /* Alinha o texto e o ícone */
     margin: 5px;
+    white-space: nowrap; /* Impede que o texto quebre para a linha */
 }
 
+/* Estilo para ícones sociais na navegação */
 nav .social-icons {
     display: flex;
     align-items: center;
@@ -55,18 +58,52 @@ nav .social-icons {
     margin-left: 15px;
 }
 
+/* Estilo para ícones sociais */
 nav .social-icons a {
     color: #fff;
     font-size: 20px;
     transition: color 0.3s ease;
 }
 
+/* Estilo de hover para os links */
 nav a:hover {
     background-color: #66bb6a;
 }
 
+/* Estilo de hover para os ícones sociais */
 nav .social-icons a:hover {
     color: #1da1f2;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    /* Muda o layout para coluna em telas menores */
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /* Ajusta o tamanho e alinhamento dos links */
+    nav a {
+        padding: 12px;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Alinha os ícones sociais no centro */
+    nav .social-icons {
+        margin-left: 0;
+        margin-top: 10px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Pequenos ajustes para telas muito pequenas */
+    nav a {
+        padding: 10px;
+        font-size: 14px;
+    }
 }
 
 section {
